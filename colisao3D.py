@@ -113,10 +113,10 @@ def main():
         #imprime informações sobre conservação
         print_timer += dt
         if print_timer > 1.0:
-            kinectic_energy = 0.0
+            kinetic_energy = 0.0
             for sphere in list_spheres:
-                kinectic_energy += float(sphere.velocity.norm() ** 2)#assumimos a massa como sendo uma unidade e nao dividimos por 2 para economizar processamento
-            print("Total kinectic energy: {}\n".format(kinectic_energy), end = '\r')
+                kinetic_energy += float(sphere.velocity.norm() ** 2)#assumimos a massa como sendo uma unidade e nao dividimos por 2 para economizar processamento
+            print("Total kinetic energy: {}\n".format(kinetic_energy), end = '\r')
             print_timer = 0.0
 
         glfw.swap_buffers(window)
